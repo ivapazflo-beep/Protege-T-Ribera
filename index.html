@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Protege'T Ribera: proyecto educativo simulado de información, prevención y autoprotección ante emergencias en Ribera Segura.">
+  <meta name="theme-color" content="#102b46">
+  <title>Protege'T Ribera | Emergencias y Protección Civil</title>
+  <style>
+    :root{--navy:#102b46;--blue:#174b70;--orange:#f28c28;--pale:#edf3f7;--ink:#1b2b38;--muted:#5d6b76;--white:#fff;--line:#dce5eb;--shadow:0 12px 32px rgba(16,43,70,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.55;background:#fff}
+    a{color:inherit}.skip{position:absolute;left:-9999px}.skip:focus{left:1rem;top:1rem;background:#fff;padding:.7rem;z-index:99}
+    .notice{background:#fff3df;color:#68420d;text-align:center;padding:.55rem 1rem;font-size:.84rem;font-weight:700;border-bottom:1px solid #f3d6a8}
+    header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #071a2b33}
+    .wrap{width:min(1160px,92%);margin:auto}.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+    .brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}.mark{width:58px;height:58px;flex:none;object-fit:contain;border-radius:50%;background:#fff}.cover{display:block;width:100%;height:auto;max-height:520px;object-fit:contain;background:#eaf4fc}.cover-frame{background:#eaf4fc;border-bottom:5px solid var(--orange)}.brand strong{display:block;font-size:1.28rem;letter-spacing:.06em}.brand small{display:block;color:#d5e2eb;font-size:.78rem}
+    nav{display:flex;gap:.25rem;align-items:center;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:.55rem .72rem;border-radius:6px;font-size:.9rem}nav a:hover,nav a:focus{background:#ffffff20}
+    .hero{background:linear-gradient(115deg,#102b46f2,#174b70e8),linear-gradient(45deg,#174b70,#102b46);color:#fff;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;padding:4.2rem 0}
+    .eyebrow{color:#ffd29c;text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700}
+    h1{font-size:clamp(2.25rem,5vw,4.1rem);line-height:1.06;margin:.65rem 0 1rem;max-width:700px}
+    .hero p{font-size:1.12rem;color:#e3edf4;max-width:640px}
+    .btn{display:inline-block;text-decoration:none;font-weight:700;border-radius:6px;padding:.82rem 1.15rem;margin:.45rem .45rem 0 0;background:var(--orange);color:#182a38}
+    .btn.secondary{background:transparent;border:1px solid #d9e6ef;color:#fff}
+    .hero-card{background:#ffffff12;border:1px solid #ffffff35;border-radius:16px;padding:1.5rem;backdrop-filter:blur(4px)}
+    .hero-card h2{font-size:1.2rem;margin:0 0 .6rem}.hero-card p{font-size:.95rem;margin:.4rem 0;color:#e6eef4}
+    .emergency{display:flex;align-items:center;gap:1rem;background:#fff;color:var(--navy);border-radius:10px;padding:1rem;margin-top:1rem}
+    .number{font-size:2.35rem;font-weight:800;color:#c8342b;line-height:1}
+    .emergency small{display:block;color:var(--muted)}
+    section{padding:3.4rem 0}.section-head{max-width:720px;margin-bottom:1.7rem}.kicker{color:#b45d0b;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem;font-weight:800}
+    h2{color:var(--navy);font-size:clamp(1.65rem,3vw,2.35rem);line-height:1.2;margin:.35rem 0 .7rem}h3{color:var(--navy);margin:.2rem 0 .55rem}
+    .lead{color:var(--muted);font-size:1.04rem}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+    .card{border:1px solid var(--line);border-radius:12px;padding:1.25rem;background:#fff;box-shadow:0 5px 18px rgba(16,43,70,.045)}
+    .card p{color:var(--muted);margin:.4rem 0}.icon{width:42px;height:42px;border-radius:10px;background:#fff0df;display:grid;place-items:center;color:#a95008;font-size:1.35rem;margin-bottom:.8rem}
+    .soft{background:var(--pale)}.split{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center}
+    .checklist{padding:0;list-style:none}.checklist li{padding:.55rem 0 .55rem 1.8rem;position:relative;border-bottom:1px solid var(--line)}.checklist li:before{content:"✓";position:absolute;left:0;color:#16805b;font-weight:800}
+    .callout{border-left:5px solid var(--orange);background:#fff;padding:1.1rem 1.3rem;border-radius:0 10px 10px 0;box-shadow:var(--shadow)}
+    .campaign{display:flex;justify-content:space-between;gap:1rem;align-items:center;background:var(--navy);color:#fff;border-radius:14px;padding:1.5rem 1.7rem}.campaign h2{color:#fff;margin:0}.campaign p{color:#dce8f0;margin:.35rem 0 0}
+    .socials{display:flex;gap:.65rem;flex-wrap:wrap;margin-top:1rem}.social{display:inline-flex;align-items:center;gap:.55rem;padding:.7rem .9rem;border:1px solid var(--line);border-radius:8px;text-decoration:none;font-weight:700;background:#fff}.social:hover{border-color:var(--orange);transform:translateY(-1px)}.social svg{width:20px;height:20px;fill:currentColor}
+    footer{background:#0b2034;color:#d8e4ec;padding:2.2rem 0}.foot{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem}.foot strong{color:#fff}.foot p{font-size:.9rem;color:#c2d0da}.disclaimer{border-top:1px solid #ffffff28;margin-top:1.5rem;padding-top:1rem;font-size:.8rem;color:#c2d0da}
+    .tag{display:inline-block;background:#fff0df;color:#8a4809;border-radius:99px;padding:.25rem .65rem;font-size:.75rem;font-weight:700}
+    @media(max-width:800px){.top{align-items:flex-start;flex-direction:column}nav{width:100%}nav a{padding:.45rem .55rem}.hero-inner,.split,.foot{grid-template-columns:1fr}.hero-inner{padding:3rem 0}.grid{grid-template-columns:repeat(2,1fr)}.campaign{align-items:flex-start;flex-direction:column}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}.brand strong{font-size:1.1rem}.hero-card{padding:1.1rem}section{padding:2.5rem 0}}
+  </style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="notice">PROYECTO EDUCATIVO SIMULADO · RIBERA SEGURA · MÓDULO 1503</div>
+<header>
+  <div class="wrap top">
+    <a class="brand" href="#inicio" aria-label="Protege'T Ribera, inicio">
+      <img class="mark" src="img/emblema-proteget-ribera.png" alt="Emblema Protege’T Ribera">
+      <span><strong>PROTEGE'T RIBERA</strong><small>Emergencias y Protección Civil · Ribera Segura</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#riesgos">Riesgos</a><a href="#autoproteccion">Autoprotección</a><a href="#formacion">Formación</a><a href="#redes">Redes sociales</a>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+  <div class="cover-frame" aria-label="Imagen de portada de Protege'T Ribera">
+    <div class="wrap">
+      <img class="cover" src="img/portada-proteget-ribera.png" alt="Portada Protege'T: infórmate, prepárate y actúa ante incendios forestales, inundaciones, olas de calor, riesgos sanitarios y terremotos">
+    </div>
+  </div>
+
+  <section class="hero" id="inicio">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Servicio municipal simulado · Protección Civil</div>
+        <h1>La prevención empieza contigo</h1>
+        <p>Información clara para conocer los riesgos de nuestro entorno, prepararnos ante una emergencia y proteger a las personas y al municipio de Ribera Segura.</p>
+        <a class="btn" href="#autoproteccion">Aprende a protegerte</a>
+        <a class="btn secondary" href="#riesgos">Conoce los riesgos</a>
+      </div>
+      <aside class="hero-card">
+        <span class="tag">Información esencial</span>
+        <h2>Ante una emergencia real</h2>
+        <p>Mantén la calma, sigue las indicaciones de los servicios de emergencia y consulta siempre fuentes oficiales.</p>
+        <div class="emergency"><div class="number">112</div><div><strong>Teléfono de emergencias</strong><small>Comunitat Valenciana · Unión Europea</small></div></div>
+        <p><small>Esta página es un ejercicio educativo y no recibe avisos ni gestiona emergencias.</small></p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="riesgos">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Conocer para prevenir</div><h2>Riesgos que debemos conocer</h2><p class="lead">La prevención comienza identificando los peligros que pueden afectar a nuestro entorno. Estos contenidos son ejemplos divulgativos para el municipio ficticio de Ribera Segura.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🌧️</div><h3>Lluvias intensas e inundaciones</h3><p>Evita barrancos, cauces y pasos inundables. No cruces zonas anegadas a pie ni en vehículo.</p></article>
+        <article class="card"><div class="icon">🔥</div><h3>Incendios forestales</h3><p>No arrojes colillas ni enciendas fuego en zonas no autorizadas. Si ves humo o llamas, avisa al 112.</p></article>
+        <article class="card"><div class="icon">☀️</div><h3>Olas de calor</h3><p>Hidrátate, evita esfuerzos en las horas centrales y presta atención a personas vulnerables.</p></article>
+        <article class="card"><div class="icon">🏠</div><h3>Emergencias domésticas</h3><p>Revisa instalaciones, detectores de humo y hábitos seguros en cocina y calefacción.</p></article>
+        <article class="card"><div class="icon">🌬️</div><h3>Viento y temporales</h3><p>Asegura objetos en balcones, aléjate de árboles y elementos inestables y limita desplazamientos innecesarios.</p></article>
+        <article class="card"><div class="icon">🚗</div><h3>Seguridad vial</h3><p>Adapta la conducción a la meteorología, respeta las señales y facilita el paso a los vehículos de emergencia.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="autoproteccion">
+    <div class="wrap split">
+      <div>
+        <div class="kicker">Actúa con seguridad</div><h2>Medidas de autoprotección</h2>
+        <p class="lead">Pequeñas acciones antes, durante y después de una emergencia pueden reducir sus consecuencias.</p>
+        <ul class="checklist">
+          <li>Identifica los riesgos de tu vivienda y de tu entorno.</li>
+          <li>Prepara un plan familiar y acuerda un punto de encuentro.</li>
+          <li>Ten a mano documentación, medicación y contactos importantes.</li>
+          <li>Prepara una mochila básica para una posible evacuación.</li>
+          <li>Sigue las instrucciones oficiales: evacuar o confinarse según se indique.</li>
+        </ul>
+      </div>
+      <div class="callout">
+        <h3>¿Evacuación o confinamiento?</h3>
+        <p>No siempre la opción más segura es salir. En algunas emergencias, como determinados episodios de humo o contaminación exterior, puede ser necesario permanecer en un edificio.</p>
+        <p><strong>La regla principal:</strong> sigue las instrucciones de las autoridades y servicios de emergencia. No improvises rutas ni decisiones basándote en rumores.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Aprender también salva</div><h2>Formación y divulgación</h2><p class="lead">La cultura preventiva se construye con información accesible, formación práctica y participación ciudadana.</p></div>
+      <div class="grid">
+        <article class="card"><div class="icon">🎒</div><h3>Prepara tu mochila</h3><p>Agua, alimentos no perecederos, linterna, radio, pilas, botiquín, medicación y documentación esencial.</p></article>
+        <article class="card"><div class="icon">📣</div><h3>Reconoce fuentes fiables</h3><p>Consulta los canales oficiales de emergencias y protección civil. No difundas mensajes sin verificar.</p></article>
+        <article class="card"><div class="icon">👨‍👩‍👧‍👦</div><h3>Plan familiar</h3><p>Habla en familia sobre cómo contactar, dónde reuniros y qué hacer si no podéis regresar a casa.</p></article>
+      </div>
+      <div class="campaign" style="margin-top:1.5rem">
+        <div><h2>Una ciudadanía preparada es una comunidad más segura</h2><p>Infórmate, comparte consejos útiles y participa en la prevención.</p></div>
+        <a class="btn" href="#redes">Síguenos</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="actualidad">
+    <div class="wrap split">
+      <div><div class="kicker">Información municipal simulada</div><h2>Actualidad y avisos</h2><p class="lead">Este espacio podría recoger campañas preventivas, convocatorias formativas y recomendaciones estacionales.</p></div>
+      <div class="card"><span class="tag">Ejemplo de publicación</span><h3>Campaña: prepara tu hogar ante lluvias intensas</h3><p>Revisa desagües, evita almacenar objetos en zonas inundables y conoce rutas alternativas. Recuerda: nunca cruces un cauce con agua.</p><p><small>Contenido ficticio con finalidad exclusivamente educativa.</small></p></div>
+    </div>
+  </section>
+
+  <section id="redes">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Comunicación y participación</div><h2>Sigue a Protege'T Ribera</h2><p class="lead">Consulta nuestras redes sociales para encontrar contenidos divulgativos, consejos de autoprotección y campañas de prevención.</p></div>
+      <div class="socials">
+        <a class="social" href="https://www.instagram.com/protegetribera?bqrl=MTI4bG4xOXVnOGtsMw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Protege'T Ribera"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm5.5-3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>Instagram</a>
+        <a class="social" href="https://www.facebook.com/share/1EJgVwt8Gs/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Protege'T Ribera"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V4.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H7.3V14h2.8v8h3.4z"/></svg>Facebook</a>
+        <a class="social" href="https://www.tiktok.com/@protegetribera" target="_blank" rel="noopener noreferrer" aria-label="TikTok Protege'T Ribera"><svg viewBox="0 0 24 24"><path d="M19.6 7.2a6.4 6.4 0 0 1-4-1.4v8.1a6.1 6.1 0 1 1-5.3-6.1v3.2a2.9 2.9 0 1 0 2.1 2.8V2h3.2c.2 2.1 1.7 3.8 4 4.1v1.1z"/></svg>TikTok</a>
+        <a class="social" href="https://x.com/ProtegtRibera" target="_blank" rel="noopener noreferrer" aria-label="X Protege'T Ribera"><svg viewBox="0 0 24 24"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.8 5.7 22H2.5l7.3-8.4L1.8 2h6.5l4.5 6.7L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg>X</a>
+        <a class="social" href="https://youtube.com/@protegetribera?si=r9qB0sMSxHuHA9v6" target="_blank" rel="noopener noreferrer" aria-label="YouTube Protege'T Ribera"><svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>YouTube</a>
+      </div>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:1rem">Accede a los perfiles de Protege’T Ribera en Instagram, Facebook, TikTok, X y YouTube.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><strong>PROTEGE'T RIBERA</strong><p>Servicio simulado de información, formación y divulgación en protección civil y emergencias del municipio ficticio de Ribera Segura.</p></div>
+      <div><strong>En caso de emergencia real</strong><p>Llama al <strong>112</strong>. Esta web no es un canal de atención, alerta ni gestión de emergencias.</p></div>
+    </div>
+    <div class="disclaimer"><strong>AVISO IMPORTANTE:</strong> Proyecto educativo simulado elaborado con fines formativos para el módulo 1503 del Grado Superior de Coordinación de Emergencias y Protección Civil. Ribera Segura es un municipio ficticio. Este sitio no pertenece a ninguna administración pública ni está vinculado al servicio 112. Sus avisos y ejemplos no son alertas reales. Para información operativa, consulta siempre los canales oficiales.</div>
+  </div>
+</footer>
+</body>
+</html>
